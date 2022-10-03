@@ -1,6 +1,7 @@
-@mixin backImage($image, $position, $origin: 0) {
-    background: url($image) $position $origin;
+@mixin backImage($image, $offest:  0px) {
+  background: url($image) - 38px * $offest 0;
 }
+
 
 @mixin setBoxProperties($width, $height, $margin: 0) {
     width: $width;
@@ -31,4 +32,12 @@
     @media (max-width: #{$small-screen-breakpoint}) {
         @content;
     }
+}
+
+@mixin break-point($args) {
+  @if length($args) == 1 {
+    @media (max-width: nth($args, 1)) {
+      @content;
+    }
+  }
 }

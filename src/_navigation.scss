@@ -11,7 +11,7 @@ nav {
 			font-size: 0.8em;
 			margin-right: 10px;
 
-			@include largeScreenMediaQuery {
+			@include break-point(959px) {
 				font-size:1em;
 				margin:0 10px;
 			}
@@ -71,13 +71,13 @@ footer {
             @include backImage($img-social-media, 0);
 		}
 		&.two {
-            @include backImage($img-social-media, -38px);
+            @include backImage($img-social-media, 1);
 		}
 		&.three {
-            @include backImage($img-social-media, -76px);
+            @include backImage($img-social-media, 2);
 		}
 		&.four {
-            @include backImage($img-social-media, -114px);
+            @include backImage($img-social-media, 3);
 		}
 	}
 	a {
